@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    let num = [];
+
+    function isPrime(n) {
+        if (n<2) return false;
+        if (n<4) return true;
+        if (n>=4){
+            for (let i = 2; i < n; i++) {
+                if ( n % i === 0) return false;
+            }
+            return true;
+        }
+    }
+
+    function sumOfListPrime(x) {
+        sum = 0;
+        for (let i = 0; i <= x; i++) {
+            num.push(i);
+            if (isPrime(num[i])) {
+                console.log(num[i]);
+                sum += num[i];
+            }
+        }
+        return sum;
+    }
+
+    let numX = +prompt('Insert number');
+    document.write('Tống các số nguyên tố đến ' +numX+ ' là ' + sumOfListPrime(numX));
+
+
+</script>
